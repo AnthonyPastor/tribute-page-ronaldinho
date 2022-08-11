@@ -1,0 +1,91 @@
+html,
+body {
+	padding: 0px;
+	margin: 0px;
+}
+.main-container {
+	height: 100%;
+	display: grid;
+
+	grid-template-columns: 1fr;
+	grid-template-rows: 50px auto 100px;
+}
+.header {
+	background-color: black;
+	grid-row: 1 / 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header > h2 {
+	color: white;
+	font-size: 24px;
+	padding-left: 20px;
+	letter-spacing: 1.18px;
+}
+
+.body {
+	position: relative;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: bottom;
+	background-image: url("../assets/phone.jpg");
+
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	justify-items: center;
+	align-content: space-between;
+	overflow-y: auto;
+}
+
+.card {
+	grid-column: 1 / -1;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.card_text {
+	font-size: 20px;
+	letter-spacing: 1.2px;
+	font-family: "Courier New", Courier, monospace;
+	color: floralwhite;
+}
+
+.footer {
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer > h3 {
+	color: white;
+	font-size: 24px;
+	padding-left: 20px;
+	letter-spacing: 1.18px;
+}
+
+@media screen and (min-width: 500px) {
+	.header {
+		align-items: center;
+		justify-content: left;
+	}
+	.body {
+		background-position-y: bottom;
+		background-image: url("../assets/peakpx.jpg");
+	}
+	.card {
+		grid-column: 3 / 7;
+	}
+	.card_text {
+		color: darkgrey;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.body {
+		background-position: 25% 75%;
+	}
+}
